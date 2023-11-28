@@ -670,7 +670,8 @@ def main():
 
             if kwargs:
                 try:
-                    return_value = eval('function[2] (ui=True, ' + kwargs + ')') # dont worry about the eval man
+                    return_value = return_value = function[2] (ui=True, **kwargs)
+# eval('function[2] (ui=True, ' + kwargs + ')') # dont worry about the eval man
                 except SyntaxError:
                     print('SyntaxError: Enter arguments correctly.')
                     print('Tip: Enter quantity with units as string.')
